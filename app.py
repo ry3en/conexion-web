@@ -6,6 +6,7 @@ import requests
 app = Flask(__name__)
 
 url = 'https://apitodolist-ibero.herokuapp.com/api/tasks'
+
 @app.route('/')
 def home():
     try:
@@ -14,7 +15,7 @@ def home():
         print("Error...")
         response = []
 
-    return render_template('index.html', tasks = response)
+    return render_template('index.html', tasks=response)
 
 if __name__ == '__main__':
     app.run(debug=True)
